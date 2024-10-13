@@ -29,7 +29,7 @@ listItem.appendChild(removeButton);
 taskList.appendChild(listItem);
 taskInput.value=''
 //attach event listeners
-addButton.addEventListener("Click",addTask);
+addButton.addEventListener("click",addTask);
 taskInput.addEventListener("keypress", function(event){
     if(event.key==="Enter"){
         addTask();
