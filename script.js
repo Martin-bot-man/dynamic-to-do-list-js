@@ -9,15 +9,15 @@ const taskText = taskInput.value.trim();
 console.log(taskText)
 if(taskText===''){
     alert("Enter a task")
-    
+    return
 
-}else{
+}
 const listItem = document.createElement('li');
 listItem.textContent= taskText;
-removeButton = document.createElement('button');
-removeButton.textContent= "remove";
+const removeButton = document.createElement('button');
+removeButton.textContent= "Remove";
 removeButton.className ="remove-btn";
-
+    
 removeButton.onClick = function(){
 listItem.remove();
 };
