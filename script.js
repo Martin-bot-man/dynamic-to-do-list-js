@@ -12,9 +12,27 @@ if(taskText===''){
     
 
 }else{
-document.createElement('li').textContent= taskText;
-document.createElement('button').textContent= "remove"
+const listItem = document.createElement('li');
+listItem.textContent= taskText;
+removeButton = document.createElement('button');
+removeButton.textContent= "remove";
+removeButton.className ="remove-btn";
 
-}
+removeButton.onClick = function(){
+listItem.remove();
+};
+listItem.appendChild(removeButton);
+taskList.appendChild(listItem);
+taskInput.value=''
+addButton.addEventListener("onClick",addTask);
+taskInput.addEventListener("keypress", function(event){
+    if(event.key==="Enter"){
+        addTask();
     }
+})
+}
+    };
+function addTask(){
+    document.addEventListener('DOMContentLoaded', addTask)
+}
 })
